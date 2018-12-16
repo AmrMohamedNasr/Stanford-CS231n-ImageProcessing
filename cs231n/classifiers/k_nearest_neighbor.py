@@ -123,7 +123,7 @@ class KNearestNeighbor(object):
     # by michael : root(sum(X^2) - 2 X train^T + sum(train^2)).             #
     # with two sum all matrix operation                                     #
     #########################################################################
-    dists = np.sqrt(np.power(X, 2) - 2 * X.dot(self.X_train.T) + np.power(self.X_train, 2))
+    dists = np.sqrt(np.sum(np.power(X, 2),axis= 1, keepdims=1) + np.sum(np.power(self.X_train, 2), axis=1) - 2 * X.dot(self.X_train.T) )
     #########################################################################
     #                         END OF YOUR CODE                              #
     #########################################################################
