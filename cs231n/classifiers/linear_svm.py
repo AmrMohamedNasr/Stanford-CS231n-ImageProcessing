@@ -75,7 +75,7 @@ def svm_loss_vectorized(W, X, y, reg):
   # result in loss.                                                           #
   #############################################################################
   scores = X.dot(W)
-  correct_class_scores = scores[np.arange(num_train),y].reshape(-1,1)
+  correct_class_scores = scores[np.arange(num_train),y].reshape(num_train,1)
   deltas = np.ones(scores.shape)
   
 
