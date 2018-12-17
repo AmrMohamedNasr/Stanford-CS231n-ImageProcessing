@@ -53,7 +53,7 @@ class LinearClassifier(object):
       #########################################################################
       random_is = np.random.choice(num_train, size= batch_size)
       X_batch = X[random_is]
-      y_batch = X[random_is]
+      y_batch = y[random_is]
       #########################################################################
       #                       END OF YOUR CODE                                #
       #########################################################################
